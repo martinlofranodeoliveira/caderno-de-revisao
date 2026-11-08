@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T08:07:08.316755Z",
+  "title": "Design System: Caderno de Revisão",
+  "extensions": {
+    "colorMeta": {
+      "forest": {
+        "role": "primary",
+        "displayName": "Verde de quadro"
+      },
+      "forest-hover": {
+        "role": "primary",
+        "displayName": "Hover do verde"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Texto de apoio"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Regra"
+      },
+      "yellow": {
+        "role": "primary",
+        "displayName": "Amarelo de decisão"
+      },
+      "yellow-hover": {
+        "role": "primary",
+        "displayName": "Hover do amarelo"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Superfície clara"
+      },
+      "selected": {
+        "role": "neutral",
+        "displayName": "Baralho selecionado"
+      },
+      "selected-border": {
+        "role": "neutral",
+        "displayName": "Contorno selecionado"
+      },
+      "nav-hover": {
+        "role": "neutral",
+        "displayName": "Hover do baralho"
+      },
+      "field-border": {
+        "role": "neutral",
+        "displayName": "Contorno de campo"
+      },
+      "focus": {
+        "role": "semantic",
+        "displayName": "Foco visível"
+      },
+      "board-secondary": {
+        "role": "primary",
+        "displayName": "Repetir no quadro"
+      },
+      "board-secondary-hover": {
+        "role": "primary",
+        "displayName": "Hover de repetir"
+      },
+      "board-action-ink": {
+        "role": "neutral",
+        "displayName": "Tinta da ação amarela"
+      },
+      "board-muted": {
+        "role": "neutral",
+        "displayName": "Apoio sobre o quadro"
+      },
+      "warning-bg": {
+        "role": "semantic",
+        "displayName": "Fundo de aviso"
+      },
+      "warning-ink": {
+        "role": "semantic",
+        "displayName": "Texto de aviso"
+      },
+      "error-bg": {
+        "role": "semantic",
+        "displayName": "Fundo de falha"
+      },
+      "error-ink": {
+        "role": "semantic",
+        "displayName": "Texto de falha"
+      },
+      "danger": {
+        "role": "semantic",
+        "displayName": "Exclusão"
+      },
+      "danger-hover": {
+        "role": "semantic",
+        "displayName": "Hover de exclusão"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Mensagem inicial",
+        "purpose": "Título da biblioteca vazia."
+      },
+      "headline": {
+        "displayName": "Nome do baralho",
+        "purpose": "Cabeçalho da área de trabalho."
+      },
+      "title": {
+        "displayName": "Pergunta na lista",
+        "purpose": "Pergunta de cada linha de cartão."
+      },
+      "body": {
+        "displayName": "Resposta na lista",
+        "purpose": "Resposta e conteúdo de leitura na biblioteca."
+      },
+      "label": {
+        "displayName": "Agenda e apoio",
+        "purpose": "Metadados e notas compactas; há ajustes por contexto no CSS."
+      },
+      "question": {
+        "displayName": "Pergunta no quadro",
+        "purpose": "Centro visual da sessão de revisão."
+      }
+    },
+    "shadows": [
+      {
+        "name": "dialog",
+        "value": "0 18px 64px #071d1940",
+        "purpose": "Somente a janela modal; demais superfícies são planas."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-hover",
+        "value": "background-color .15s ease-out",
+        "purpose": "Transição de fundo dos botões preenchidos."
+      },
+      {
+        "name": "card-arrive",
+        "value": ".18s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Pergunta e resposta; de clip-path inset(0 0 10% 0) e opacity .65 a inset(0) e opacity 1."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}",
+        "purpose": "Remove animações e transições quando o navegador informa redução de movimento."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão principal",
+      "kind": "button",
+      "description": "Variante implementada; cores e estados extraídos de src/styles.css.",
+      "html": "<button class=\"ds-button\" type=\"button\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M12 5v14M5 12h14\"/></svg>Novo cartão</button>",
+      "css": ".ds-button{font-family:\"DM Sans\",sans-serif;border:0;border-radius:8px;background:var(--forest,#173b33);color:var(--paper,#f6f3e9);font-weight:700;min-height:44px;padding:11px 18px;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;line-height:1.35;transition:background-color .15s ease-out;cursor:pointer;}.ds-button:hover:not(:disabled){background:#285448}.ds-button:focus-visible{outline:3px solid #9a6810;outline-offset:4px;}.ds-button:disabled{cursor:not-allowed;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-button{transition:none!important}}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Ação de texto",
+      "kind": "button",
+      "description": "Ação secundária transparente; sublinhado aparece no hover.",
+      "html": "<button class=\"ds-text\" type=\"button\">Renomear</button>",
+      "css": ".ds-text{font-family:\"DM Sans\",sans-serif;border:0;background:transparent;color:var(--ink,#19382f);display:inline-flex;align-items:center;gap:8px;padding:9px 4px;min-height:42px;line-height:1.35;font-weight:600;text-align:left;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;cursor:pointer}.ds-text:hover:not(:disabled){text-decoration-color:currentColor}.ds-text:focus-visible{outline:3px solid #9a6810;outline-offset:4px;}.ds-text:disabled{cursor:not-allowed;opacity:.5}",
+      "refersTo": "button-text"
+    },
+    {
+      "name": "Ação principal do quadro",
+      "kind": "button",
+      "description": "Variante implementada; cores e estados extraídos de src/styles.css.",
+      "html": "<button class=\"ds-board-primary\" type=\"button\">Revelar resposta</button>",
+      "css": ".ds-board-primary{font-family:\"DM Sans\",sans-serif;border:0;border-radius:8px;background:var(--forest,#173b33);color:var(--paper,#f6f3e9);font-weight:700;min-height:44px;padding:11px 18px;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;line-height:1.35;transition:background-color .15s ease-out;cursor:pointer;background:var(--yellow,#edce83);color:#243a2b;}.ds-board-primary:hover:not(:disabled){background:#f6dc9e}.ds-board-primary:focus-visible{outline:3px solid #9a6810;outline-offset:4px;outline-color:var(--surface,#fffdf7);}.ds-board-primary:disabled{cursor:not-allowed;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-board-primary{transition:none!important}}",
+      "refersTo": "button-board-primary"
+    },
+    {
+      "name": "Repetir no quadro",
+      "kind": "button",
+      "description": "Variante implementada; cores e estados extraídos de src/styles.css.",
+      "html": "<button class=\"ds-board-secondary\" type=\"button\">Repetir amanhã</button>",
+      "css": ".ds-board-secondary{font-family:\"DM Sans\",sans-serif;border:0;border-radius:8px;background:var(--forest,#173b33);color:var(--paper,#f6f3e9);font-weight:700;min-height:44px;padding:11px 18px;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;line-height:1.35;transition:background-color .15s ease-out;cursor:pointer;background:#34594b;color:#f6f3e9;}.ds-board-secondary:hover:not(:disabled){background:#466d5b}.ds-board-secondary:focus-visible{outline:3px solid #9a6810;outline-offset:4px;outline-color:var(--surface,#fffdf7);}.ds-board-secondary:disabled{cursor:not-allowed;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-board-secondary{transition:none!important}}",
+      "refersTo": "button-board-secondary"
+    },
+    {
+      "name": "Confirmação destrutiva",
+      "kind": "button",
+      "description": "Variante implementada; cores e estados extraídos de src/styles.css.",
+      "html": "<button class=\"ds-destructive\" type=\"button\">Excluir definitivamente</button>",
+      "css": ".ds-destructive{font-family:\"DM Sans\",sans-serif;border:0;border-radius:8px;background:var(--forest,#173b33);color:var(--paper,#f6f3e9);font-weight:700;min-height:44px;padding:11px 18px;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;line-height:1.35;transition:background-color .15s ease-out;cursor:pointer;background:var(--danger,#a13624);color:#fffdf7;}.ds-destructive:hover:not(:disabled){background:#852a1d}.ds-destructive:focus-visible{outline:3px solid #9a6810;outline-offset:4px;}.ds-destructive:disabled{cursor:not-allowed;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-destructive{transition:none!important}}",
+      "refersTo": "button-destructive"
+    },
+    {
+      "name": "Campo de edição",
+      "kind": "input",
+      "description": "Rótulo, campo e orientação de comprimento do editor de baralho.",
+      "html": "<label class=\"ds-field\">Nome do baralho<input type=\"text\" placeholder=\"Ex.: Biologia — células\" autocomplete=\"off\"><span>Até 80 caracteres.</span></label>",
+      "css": ".ds-field{font-family:\"DM Sans\",sans-serif;display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:700;margin-bottom:22px;color:var(--ink,#19382f)}.ds-field input{font-family:\"DM Sans\",sans-serif;border:1px solid #aab7a8;color:var(--ink,#19382f);border-radius:6px;min-width:0;width:100%;padding:12px;background:#fffdf7;font-weight:400;font-size:16px;line-height:1.5;caret-color:var(--forest,#173b33)}.ds-field input::placeholder{color:#617568}.ds-field input:focus-visible{outline:3px solid #9a6810;outline-offset:4px;}.ds-field>span{font-size:11px;font-weight:400;color:var(--muted,#52675e)}",
+      "refersTo": "field"
+    },
+    {
+      "name": "Baralho selecionado",
+      "kind": "nav",
+      "description": "Item da biblioteca com total e cartões para hoje.",
+      "html": "<nav aria-label=\"Escolher baralho\"><button class=\"ds-deck ds-selected\" type=\"button\" aria-current=\"page\"><span class=\"ds-deck-title\">Português · exemplo</span><span class=\"ds-deck-count\">3 cartões<span class=\"ds-due\">3 para hoje</span></span></button></nav>",
+      "css": ".ds-deck{font-family:\"DM Sans\",sans-serif;width:100%;border:1px solid transparent;border-radius:8px;background:none;text-align:left;padding:14px 10px;color:var(--ink,#19382f);min-width:0;cursor:pointer}.ds-deck.ds-selected{background:#e5eadb;border-color:#9eaf9a}.ds-deck:hover:not(.ds-selected){background:#eeeee2}.ds-deck:focus-visible{outline:3px solid #9a6810;outline-offset:4px;}.ds-deck-title{display:block;font-weight:700;font-size:15px;line-height:1.4;overflow-wrap:anywhere}.ds-deck-count{display:flex;gap:8px;justify-content:space-between;font-size:11px;color:var(--muted,#52675e);margin-top:7px;flex-wrap:wrap}.ds-due{font-weight:700;color:var(--forest,#173b33)}@media(max-width:760px){.ds-deck{width:180px;min-width:180px;padding:10px}.ds-deck-title{font-size:13px}.ds-deck-count{font-size:10px;gap:5px}}",
+      "refersTo": "deck-selected"
+    },
+    {
+      "name": "Linha de cartão",
+      "kind": "card",
+      "description": "Pergunta, resposta e agenda em linha separada por regra; texto demonstrativo.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-copy\"><h2>Qual é a diferença entre “mas” e “mais”?</h2><p>“Mas” expressa oposição. “Mais” indica quantidade ou intensidade.</p><span class=\"ds-schedule\">Caixa 1 · Para revisar hoje</span></div><div class=\"ds-card-actions\"><button class=\"ds-card-action\" type=\"button\">Editar</button><button class=\"ds-card-action ds-danger\" type=\"button\">Excluir</button></div></article>",
+      "css": ".ds-card{font-family:\"DM Sans\",sans-serif;color:var(--ink,#19382f);display:flex;justify-content:space-between;align-items:flex-start;gap:24px;padding:25px 0;border-bottom:1px solid var(--line,#cdd2c5)}.ds-card-copy{min-width:0}.ds-card h2{margin:0;font-size:18px;font-weight:600;letter-spacing:-.015em;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere;text-wrap:balance}.ds-card p{margin:8px 0 0;font-size:14px;line-height:1.65;color:var(--muted,#52675e);white-space:pre-wrap;overflow-wrap:anywhere;max-width:68ch}.ds-schedule{display:block;margin-top:13px;font-size:11px;color:#52675e}.ds-card-actions{display:flex;gap:13px;flex-shrink:0;font-size:12px}.ds-card-action{font-family:\"DM Sans\",sans-serif;font-size:inherit;border:0;background:transparent;color:var(--ink,#19382f);display:inline-flex;align-items:center;gap:8px;padding:9px 4px;min-height:42px;line-height:1.35;font-weight:600;text-align:left;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;cursor:pointer}.ds-card-action:hover:not(:disabled){text-decoration-color:currentColor}.ds-card-action:focus-visible{outline:3px solid #9a6810;outline-offset:4px;}.ds-card-action:disabled{cursor:not-allowed;opacity:.5}.ds-danger{color:var(--danger,#a13624)}@media(max-width:760px){.ds-card{padding:22px 0;gap:14px;flex-direction:column}.ds-card h2{font-size:17px}.ds-card p{font-size:13px}.ds-card-actions{gap:24px}.ds-card-action{min-height:32px;padding:3px 0}.ds-schedule{font-size:10px}}"
+    },
+    {
+      "name": "Cinco caixas de revisão",
+      "kind": "custom",
+      "description": "Faixa informativa ordenada. Contagens do snippet são exemplos, não métricas de eficácia.",
+      "html": "<ol class=\"ds-boxes\" aria-label=\"Caixas de revisão\"><li><span class=\"ds-box-name\">Caixa 1</span><strong>3 <span>cartões</span></strong><small>Novos ou repetir</small></li><li><span class=\"ds-box-name\">Caixa 2</span><strong>0 <span>cartões</span></strong><small>Intervalo de 3 dias</small></li><li><span class=\"ds-box-name\">Caixa 3</span><strong>0 <span>cartões</span></strong><small>Intervalo de 7 dias</small></li><li><span class=\"ds-box-name\">Caixa 4</span><strong>0 <span>cartões</span></strong><small>Intervalo de 14 dias</small></li><li><span class=\"ds-box-name\">Caixa 5</span><strong>0 <span>cartões</span></strong><small>Intervalo de 30 dias</small></li></ol>",
+      "css": ".ds-boxes{font-family:\"DM Sans\",sans-serif;color:var(--ink,#19382f);list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:0;margin:24px 0 30px;border-bottom:1px solid var(--line,#cdd2c5)}.ds-boxes li{padding:0 16px 18px;border-right:1px solid var(--line,#cdd2c5);min-width:0}.ds-boxes li:first-child{padding-left:0}.ds-boxes li:last-child{border-right:0;padding-right:0}.ds-box-name{font-size:11px;color:var(--muted,#52675e);display:block;margin-bottom:5px}.ds-boxes strong{font-size:23px;font-weight:600;letter-spacing:-.02em;display:block;font-variant-numeric:tabular-nums}.ds-boxes strong span{font-size:11px;letter-spacing:0;color:var(--muted,#52675e);font-weight:400}.ds-boxes small{font-size:10px;color:var(--muted,#52675e);display:block;margin-top:5px;line-height:1.4}@media(max-width:1100px){.ds-boxes li{padding-left:10px;padding-right:10px}.ds-boxes strong span{display:block}}@media(max-width:760px){.ds-boxes{margin-top:20px;margin-bottom:21px}.ds-boxes li{padding:0 8px 14px}.ds-box-name{font-size:10px}.ds-boxes strong{font-size:20px}.ds-boxes strong span{font-size:9px}.ds-boxes small{font-size:9px;line-height:1.5}}"
+    },
+    {
+      "name": "Quadro de revisão",
+      "kind": "custom",
+      "description": "Estado revelado extraído do quadro real. O snippet é visual; as operações de agenda pertencem à aplicação.",
+      "html": "<section class=\"ds-board\" aria-label=\"Sessão de revisão\"><div class=\"ds-position\"><span>Cartão 1 de 3</span><span>Caixa 1</span></div><div class=\"ds-question\"><h2>Quando usar “por que” em uma pergunta?</h2><div class=\"ds-answer\"><h3>Resposta</h3><p>Use “por que” no início de perguntas diretas ou indiretas sobre uma razão.</p></div></div><div class=\"ds-board-actions\"><button class=\"ds-repeat\" type=\"button\">Repetir amanhã <kbd>1</kbd></button><button class=\"ds-remember\" type=\"button\">Lembrei <kbd>2</kbd></button></div><p class=\"ds-board-note\">Lembrei avança uma caixa. Repetir volta à caixa 1. Os intervalos organizam a agenda, sem medir o que você aprendeu.</p></section>",
+      "css": ".ds-board{font-family:\"DM Sans\",sans-serif;background:var(--forest,#173b33);color:var(--paper,#f6f3e9);border-radius:14px;padding:28px clamp(24px,4vw,52px) 24px;min-height:410px;display:flex;flex-direction:column}.ds-position{display:flex;justify-content:space-between;font-size:12px;color:#c1d1bf;font-variant-numeric:tabular-nums}.ds-question{padding:38px 0 30px;flex:1;animation:ds-card-arrive .18s cubic-bezier(.16,1,.3,1)}.ds-question h2{margin:0;font-size:clamp(26px,3vw,38px);line-height:1.3;font-weight:500;letter-spacing:-.025em;white-space:pre-wrap;overflow-wrap:anywhere;max-width:30ch;text-wrap:balance}.ds-answer{border-top:1px solid #617d68;margin-top:28px;padding-top:22px;animation:ds-card-arrive .18s cubic-bezier(.16,1,.3,1)}.ds-answer h3{margin:0 0 9px;font-size:12px;font-weight:700;color:#d6e0cf}.ds-answer p{margin:0;font-size:17px;color:#f6f3e9;line-height:1.7;max-width:66ch;white-space:pre-wrap;overflow-wrap:anywhere}.ds-board-actions{display:flex;gap:14px;justify-content:flex-end;flex-wrap:wrap}.ds-repeat,.ds-remember{font-family:\"DM Sans\",sans-serif;border:0;border-radius:8px;background:var(--forest,#173b33);color:var(--paper,#f6f3e9);font-weight:700;min-height:44px;padding:11px 18px;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;line-height:1.35;transition:background-color .15s ease-out;cursor:pointer;}.ds-repeat{background:#34594b;color:#f6f3e9}.ds-repeat:hover:not(:disabled){background:#466d5b}.ds-remember{background:var(--yellow,#edce83);color:#243a2b}.ds-remember:hover:not(:disabled){background:#f6dc9e}.ds-repeat:focus-visible,.ds-remember:focus-visible{outline:3px solid #fffdf7;outline-offset:4px}.ds-repeat:disabled,.ds-remember:disabled{cursor:not-allowed;opacity:.5}.ds-board-actions kbd{font:inherit;font-size:11px;border:1px solid currentColor;padding:2px 6px;border-radius:4px;font-weight:400;opacity:.85}.ds-board-note{margin:25px 0 0;font-size:11px;color:#c1d1bf;max-width:75ch;line-height:1.65}@keyframes ds-card-arrive{from{clip-path:inset(0 0 10% 0);opacity:.65}to{clip-path:inset(0);opacity:1}}@media(max-width:1100px){.ds-board-actions{justify-content:stretch}.ds-board-actions>button{flex:1}}@media(max-width:760px){.ds-board{padding:22px 22px 19px;min-height:390px}.ds-position{font-size:11px}.ds-question{padding:32px 0}.ds-question h2{font-size:29px;max-width:none}.ds-answer p{font-size:16px}.ds-board-actions{gap:10px}.ds-board-actions>button{font-size:13px;padding-left:12px;padding-right:12px}.ds-board-actions kbd{display:none}.ds-board-note{font-size:10px;margin-top:23px}}@media(prefers-reduced-motion:reduce){.ds-question,.ds-answer{animation:none!important}.ds-repeat,.ds-remember{transition:none!important}}",
+      "refersTo": "study-board"
+    }
+  ],
+  "narrative": {
+    "northStar": "Quadro de aula e bandejas de revisão",
+    "overview": "O sistema construído combina uma mesa clara de biblioteca com um quadro verde para a pergunta em estudo. Regras finas separam informações, os controles usam cantos discretos e a cor amarela destaca a decisão principal dentro da sessão. A expressão visual vem da organização, do contraste entre papel e quadro e do ícone linear de livro; não há textura de papel ou falso giz.\n\nEste é um registro por extração, feito em 8 de novembro de 2026. A autoridade visual é o código de `src/styles.css` e `src/App.jsx`, confrontado com as sete capturas finais em `.impeccable/review/`: `desktop-empty.jpg`, `desktop-library.jpg`, `desktop-study.jpg`, `desktop-readonly.jpg`, `desktop-conflict.jpg`, `mobile-top.jpg` e `mobile-study.jpg`. O contrato `DIRECTION-CONTRACT.txt` da execução `continuacao-open-source-20261108` fornece o nome da direção. `PRODUCT.md` fornece apenas os compromissos duráveis pertinentes. A interface é code-led e não tem composição visual aprovada pelo usuário. Nome da direção e linguagem descritiva registram o que foi construído; perguntas opcionais permaneceram sem resposta e as decisões inferidas do mandato autônomo não são preferências permanentes do usuário.\n\nA revisão de acabamento informou **SHIP** no escopo restrito de F1, contagens e desempenho, e F2, conflito entre abas, com 107 testes passando. Este documento não é uma nova auditoria e não certifica WCAG, impressão nem funcionamento em todos os navegadores. O objetivo e os estados desta superfície ficam no brief de `src/App.jsx`, separado das regras visuais reutilizáveis.",
+    "keyCharacteristics": [
+      "Papel quente, tinta verde escura e quadro de revisão com contraste invertido.",
+      "DM Sans local em todos os papéis, sem uma segunda família de destaque.",
+      "Biblioteca de linhas e divisórias, com concentração da cor no quadro de estudo.",
+      "Cinco caixas em sequência e estados explícitos de armazenamento e acesso à edição.",
+      "Movimento curto ao exibir conteúdo, removido com redução de movimento."
+    ],
+    "rules": [
+      {
+        "name": "The Estado Explícito Rule",
+        "body": "Preserve a diferença visual entre aviso, falha e exclusão, mantendo a descrição e as ações de recuperação junto do estado.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sombra de Diálogo Rule",
+        "body": "Reserve a sombra existente ao diálogo; não a espalhe pelas linhas da biblioteca ou pelas cinco caixas.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** conservar o papel como base de leitura e o verde como quadro de estudo, seguindo os tokens extraídos.",
+      "**Do** usar a mesma DM Sans local e preservar a hierarquia entre pergunta, resposta, agenda e ação.",
+      "**Do** manter as cinco caixas como sequência legível e as ações de revisão como botões com texto.",
+      "**Do** conservar rótulos, foco visível, avisos de armazenamento e caminhos de exportação junto do estado relevante.",
+      "**Do** testar a mudança do índice lateral para a faixa superior nos breakpoints reais antes de estender esta superfície."
+    ],
+    "donts": [
+      "**Don't** tratar os nomes descritivos deste documento como aprovação de uma composição pelo usuário.",
+      "**Don't** introduzir textura de papel, falso giz ou sombras em cada cartão como se fossem parte do sistema existente.",
+      "**Don't** substituir a sequência funcional por um dashboard de eficácia ou métricas de aprendizagem inventadas.",
+      "**Don't** representar conflito em memória e bloqueio de edição como o mesmo estado.",
+      "**Don't** apresentar o stylesheet de impressão, os atributos acessíveis ou o parecer restrito como certificação universal."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "decks": [
+    {
+      "id": "exemplo-geografia",
+      "title": "Geografia — exemplo fictício",
+      "cards": [
+        {
+          "id": "capital-brasil",
+          "front": "Qual é a capital do Brasil?",
+          "back": "Brasília.",
+          "box": 1,
+          "due": "2026-11-08",
+          "lastReviewed": null,
+          "reviews": 0
+        },
+        {
+          "id": "oceano-atlantico",
+          "front": "Qual oceano banha a costa brasileira?",
+          "back": "O oceano Atlântico.",
+          "box": 1,
+          "due": "2026-11-08",
+          "lastReviewed": null,
+          "reviews": 0
+        }
+      ]
+    }
+  ]
+}
